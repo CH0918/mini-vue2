@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./vue.js"></script>
+    <div id="app">
+      <div>用户姓名：{{user.name}}</div>
+      <div>用户年龄：{{age}}</div>
+
+      <div>
+        <div>
+          <div>地址：{{user.address.provice}}</div>
+          <p><span>性别：{{user.sex}}</span></p>
+        </div>
+      </div>
+      <div>
+        姓名：
+        <input type="text" v-model="user.name" />
+      </div>
+      <div>
+        年龄：
+        <input type="text" v-model="age" />
+      </div>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          age: 18,
+          user: {
+            sex: '女',
+            name: '张三',
+            address: {
+              provice: '广东',
+            },
+          },
+        },
+      });
+      console.log(vm);
+    </script>
+  </body>
+</html>
