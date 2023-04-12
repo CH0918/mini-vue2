@@ -1,4 +1,5 @@
 import compileToFunction from './compileToFunction.js';
+import mountComponent from './mountComponent.js';
 /**
  * 编译器
  */
@@ -23,5 +24,7 @@ export default function mount(vm) {
     // 将渲染函数挂载到 $options 上
     vm.$options.render = render;
   }
+
+  mountComponent(vm);
   console.log('vm.$options.render', vm.$options.render);
 }
