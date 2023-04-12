@@ -3,6 +3,7 @@ class Vue {
     this.$data = option.data;
 
     // 代理数据
+    // this.name  => this.$data.name
     Object.keys(this.$data).forEach((key) => {
       Object.defineProperty(this, key, {
         enumerable: true,
@@ -154,3 +155,4 @@ function getValue(obj, key) {
     return newObj[k];
   }, obj);
 }
+console.log(getValue({ o: { p: { name: 'zhang' } } }, 'o.p.name'));
