@@ -36,7 +36,6 @@ function createTextNode(textAst) {
  * @param {*} children 插槽所有子节点的 ast 组成的数组
  */
 function renderSlot(attrs, children) {
-  debugger;
   // 父组件 VNode 的 attr 信息
   const parentAttr = this._parentVnode.attr;
   let vnode = null;
